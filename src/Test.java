@@ -15,7 +15,7 @@ public class Test {
         Tree balancedTree = new Tree(ints);
 
         System.out.println(balancedTree);
-        balancedTree.invert();
+        balancedTree.reverse();
         System.out.println(balancedTree);
 
     }

@@ -25,14 +25,14 @@ public class Tree {
     }
 
     /**
-     * Invert the children of a node
-     * @param flip data.Node who's children are to be inverted
+     * reverse the children of a node
+     * @param flip data.Node who's children are to be reverseed
      */
-    public void invert(Node<Integer> flip) {
+    public void reverse(Node<Integer> flip) {
         if (flip != null) {
             Node<Integer> swapTemp = flip.left;
-            invert(flip.left);
-            invert(flip.right);
+            reverse(flip.left);
+            reverse(flip.right);
 
             flip.left = flip.right;
             flip.right = swapTemp;
@@ -40,10 +40,10 @@ public class Tree {
     }
 
     /**
-     * Invert the entire tree
+     * reverse the entire tree
      */
-    public void invert() {
-        invert(root);
+    public void reverse() {
+        reverse(root);
     }
 
     /**
